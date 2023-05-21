@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet Test</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,700&family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" async></script>
+    </head>
+    <body>
+        <header class="topPage">
+            <nav class="navBar">
+                <div class="logoTitle">
+                    <h1>Movie Me</h1>
+                </div>
+                <label class="hamburger" for="check">
+                    <input type="checkbox" id="check" class="checkToggle">
+                    
+                
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+                <div class="btnNavBar">
+                    <button class="btn btnHome" role="button">Accueil</button>
+                    <button class="btn btnFind" role="button">Trouvez Un Film</button>    
+                    <button class="btn btnAdd" role="button">Ajoutez Un Film</button>
+                </div>
+            </nav>
+        </header>
+
+        <section id="Home" class="homePage">
+            <img src="assets/images/img1.svg" alt="illustration bg">
+            <div class="btnHomePage">
+                
+            </div>
+
+        </section>
+
+        <section id="AddPage" class="addMoviePage">
+            <div class="topAddSection">
+                <h1>Ajoutes Un Film</h1>
+            </div>
+            <div class="labelsAddMovie">
+                <form action="" method="get" class="formAddMovie">
+                    <div class="formAddMovie AddName">
+                        <label for="MovieName">Nom du film à ajouter : </label>
+                        <input type="text" id="MovieName" name="nameOfMovie">
+                    </div>
+                    <div class="formAddMovie">
+                        <label for="MovieGenre">Genre du film à ajouter : </label>
+                        <select id="MovieGenre">
+                            <optgroup label="Genres">
+                                <option>Aventure</option>
+                                <option>Action</option>
+                                <option>Comédie</option>
+                                <option>Drame</option>
+                                <option>Policier</option>
+                                <option>Science-Fiction</option>
+                                <option>Thriller</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="formAddMovie">
+                        <input type="submit" value="Ajoutez le film !">
+                    </div>
+                </form> 
+            </div>
+        </section>
+
+        <section id="FindPage" class="findMoviePage">
+
+        </section>
+
+        <footer class="botPage">
+            <p>&copy; All Rights Reserved. Movie Me 2023 </p>
+        </footer>
+    </body>
+</html>

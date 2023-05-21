@@ -1,0 +1,283 @@
+:root {
+  --maint-font-family: "Crimson Text";
+  --secondary-font-family: "Playfair Display";
+  --bg-color: #232946;
+  --headline-color: #fffffe;
+  --main-text-color: #b8c1ec;
+  --button-color: #eebbc3;
+  --button-text-color: #232946;
+  --radial1-bgcolor: #8EC5FC;
+  --radial1-bgimg: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+body {
+  background: var(--bg-color);
+  font-family: var(--maint-font-family);
+  color: var(--main-text-color);
+}
+
+button {
+  background-color: transparent;
+  border: 0.5px solid var(--radial1-bgcolor);
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  color: var(--main-text-color);
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-image: var(--radial1-bgimg);
+  animation: slidernbw 5s linear infinite;
+  color: var(--button-text-color);
+}
+
+@keyframes slidernbw {
+  to {
+    background-position: 20vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .topPage .navBar .logoTitle {
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-size: 3.5em;
+  }
+  .topPage .navBar .logoTitle h1 {
+    background: var(--radial1-bgcolor);
+    background-image: var(--radial1-bgimg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+  }
+  .topPage .navBar input[type=checkbox] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+  }
+  .topPage .navBar .hamburger {
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    left: 7px;
+    margin-top: -70px;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+  }
+  .topPage .navBar .hamburger span {
+    position: absolute;
+    width: 45px;
+    height: 7px;
+    background: var(--main-text-color);
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.8s ease;
+    left: 0;
+  }
+  .topPage .navBar .hamburger span.top {
+    top: 0;
+  }
+  .topPage .navBar .hamburger span.middle {
+    top: 17px;
+  }
+  .topPage .navBar .hamburger span.bottom {
+    bottom: 0;
+  }
+  .topPage .navBar input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 48px;
+    left: 5px;
+  }
+  .topPage .navBar input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 48px;
+    bottom: -1px;
+    box-shadow: 0 0 10px #495057;
+  }
+  .topPage .navBar input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  .topPage .navBar .btnNavBar {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 4;
+  }
+  .topPage .navBar .btnNavBar .btnHome {
+    animation: menuDisappear 0.8s ease-in-out forwards;
+  }
+  .topPage .navBar .btnNavBar .btnFind {
+    animation: menuDisappear 0.8s 0.4s ease-in-out forwards;
+  }
+  .topPage .navBar .btnNavBar .btnAdd {
+    animation: menuDisappear 0.8s 0.8s ease-in-out forwards;
+  }
+  .topPage .navBar .btnNavBar.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 3;
+  }
+  .topPage .navBar .btnNavBar.active .btnHome {
+    animation: menuAppear 0.8s ease-in-out;
+  }
+  .topPage .navBar .btnNavBar.active .btnFind {
+    opacity: 0;
+    animation: menuAppear 0.8s 0.4s ease-in-out forwards;
+  }
+  .topPage .navBar .btnNavBar.active .btnAdd {
+    opacity: 0;
+    animation: menuAppear 0.8s 0.8s ease-in-out forwards;
+  }
+  .homePage.active {
+    position: relative;
+    z-index: -1;
+  }
+  .homePage.active img {
+    opacity: 0;
+    width: 98%;
+    position: absolute;
+    display: block;
+    margin-top: -200px;
+  }
+  .homePage.active .btnHomePage {
+    opacity: 0;
+  }
+  .homePage.active .btnHomePage button {
+    opacity: 0;
+  }
+  .homePage {
+    position: relative;
+    z-index: -2;
+  }
+  .homePage img {
+    opacity: 1;
+    width: 98%;
+    position: absolute;
+    display: block;
+    margin-top: -230px;
+  }
+  .homePage .btnHomePage {
+    opacity: 0;
+  }
+  .addMoviePage {
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .addMoviePage.active {
+    position: relative;
+    opacity: 1;
+    margin-top: -200px;
+    width: auto;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    background: transparent;
+    border: 0.5px solid var(--radial1-bgcolor);
+    border-radius: 4px;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: 0 0 3px var(--headline-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+  }
+  .addMoviePage.active .topAddSection {
+    width: 100%;
+    padding: 5px;
+  }
+  .addMoviePage.active .topAddSection h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .addMoviePage.active .labelsAddMovie {
+    margin-top: -50px;
+  }
+  .addMoviePage.active .labelsAddMovie .formAddMovie {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--radial1-bgcolor);
+    margin: 30px 0;
+  }
+  .addMoviePage.active .labelsAddMovie .formAddMovie label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--radial1-bgcolor);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s all;
+  }
+  .addMoviePage.active .labelsAddMovie .formAddMovie .AddName input:focus ~ label,
+  .addMoviePage.active .labelsAddMovie .formAddMovie .AddName input:valid ~ label {
+    top: -5px;
+  }
+  .addMoviePage.active .labelsAddMovie .formAddMovie input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .findMoviePage {
+    opacity: 0;
+  }
+  .botPage {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  .botPage p {
+    text-align: center;
+  }
+}
+@keyframes menuAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes menuDisappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+}/*# sourceMappingURL=styles.css.map */
