@@ -1,0 +1,70 @@
+{
+    "total_questions": 3,
+    "niveaux": [
+        {
+            "niveau": "CP",
+            "nombre_questions": 2,
+            "matieres": [
+                {
+                    "matiere": "Math\u00e9matiques",
+                    "questions": [
+                        {
+                            "id": 1,
+                            "question": "Combien font 2 + 2 ?",
+                            "reponse_correcte": "4",
+                            "reponses_fausses": [
+                                "3",
+                                "5",
+                                "6"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "matiere": "Sciences",
+                    "questions": [
+                        {
+                            "id": 2,
+                            "question": "Quel est le nom du plus grand dinosaure ?",
+                            "reponse_correcte": "Argentinosaurus",
+                            "reponses_fausses": [
+                                "Tyrannosaurus Rex",
+                                "Velociraptor",
+                                "Brachiosaurus"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "matiere": "Litt\u00e9rature",
+                    "questions": []
+                }
+            ]
+        },
+        {
+            "niveau": "CE1",
+            "nombre_questions": 1,
+            "matieres": [
+                {
+                    "matiere": "Math\u00e9matiques",
+                    "questions": []
+                },
+                {
+                    "matiere": "G\u00e9ographie",
+                    "questions": [
+                        {
+                            "id": 3,
+                            "question": "Quel est la capitale de l'Italie ?",
+                            "reponse_correcte": "Rome",
+                            "reponses_fausses": [
+                                "Milan",
+                                "Venise",
+                                "Florence"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
