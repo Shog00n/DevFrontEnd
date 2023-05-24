@@ -1,5 +1,5 @@
 {
-    "total_questions": 3,
+    "total_questions": 4,
     "niveaux": [
         {
             "niveau": "CP",
@@ -43,11 +43,20 @@
         },
         {
             "niveau": "CE1",
-            "nombre_questions": 1,
+            "nombre_questions": 2,
             "matieres": [
                 {
                     "matiere": "Math\u00e9matiques",
-                    "questions": []
+                    "questions": [
+                        {
+                            "id": 4,
+                            "question": "Le nombre 7 est pair Vrai ou Faux ?",
+                            "reponse_correcte": "Faux",
+                            "reponses_fausses": [
+                                "Vrai"
+                            ]
+                        }
+                    ]
                 },
                 {
                     "matiere": "G\u00e9ographie",

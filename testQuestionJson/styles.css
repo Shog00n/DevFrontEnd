@@ -1,0 +1,7 @@
+:root {
+  --main-font-family: "Josefin Sans";
+}
+
+body {
+  font-family: var(--main-font-family);
+}/*# sourceMappingURL=styles.css.map */
