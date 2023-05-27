@@ -1,12 +1,19 @@
 import NavBar from "./components/NavBar";
+import button1 from "./components/buttons/button1";
 
 export default function App() {
+  // State
+
+
+  // Comportement
+
+
+  //render
+  
   return (
-    //State
-
-    // Comportement
-
-    // Affichage
-    <NavBar />
+    <div>
+      <NavBar />,
+      <button1 />
+    </div>
   )
 }
