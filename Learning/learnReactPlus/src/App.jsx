@@ -49,18 +49,18 @@ function App() {
   return (
     <div>
       <h1>Liste de Fruits</h1>
-        <ul>
-          {fruits.map((fruit) => 
+      <ul>
+        {fruits.map((fruit) => 
            
-          <Fruit 
-          fruitInfo = {fruit} 
-          onClick = {() => handleClear(fruit.id)}
-          symbol = "V"
-          key={fruit.id} 
-          />
-          )}
-        </ul>
-        <FruitForm handleAdd = {handleAdd} />
+        <Fruit 
+        fruitInfo = {fruit} 
+        onClick = {() => handleClear(fruit.id)}
+        symbol = "❌"
+        key={fruit.id} 
+        />
+        )}
+      </ul>
+      <FruitForm handleAdd = {handleAdd} />
         
     </div>
   );

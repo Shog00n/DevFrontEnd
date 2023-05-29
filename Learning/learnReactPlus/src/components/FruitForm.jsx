@@ -32,10 +32,12 @@ export default function FruitForm({ handleAdd }) {
       }
 
     //Render
-    return <form action="submit" onSubmit={handleSubmit}>
+    return (
+        <form action="submit" onSubmit={handleSubmit}>
           <input value={nouveauFruit} type="text" placeholder="Ajouter un fruit..." onChange={handleChange}/>
-          <button>Ajouter +</button>
+          <button className="btnAdd">Ajouter +</button>
         </form>
+    );
 
     
 }

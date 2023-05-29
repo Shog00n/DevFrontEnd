@@ -1,0 +1,161 @@
+:root {
+  --main-title-family: "Amatic SC";
+  --main-bg-color: #282634;
+  --primary-color: #ff4057;
+  --secondary-color: #DCDCDC;
+}
+
+body {
+  font-family: var(--main-title-family);
+  background: var(--main-bg-color);
+  color: var(--secondary-color);
+}
+
+nav {
+  position: fixed;
+  top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: 20px;
+}
+nav .logo img {
+  width: 80px;
+}
+nav .logo h1 {
+  font-size: 3em;
+  color: var(--primary-color);
+}
+nav .menuNavBar {
+  margin-right: 20px;
+}
+nav .menuNavBar ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+nav .menuNavBar ul li .btn {
+  width: 170px;
+  height: 60px;
+  font-size: 1.8em;
+  font-family: var(--main-title-family);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  color: var(--main-bg-color);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+nav .menuNavBar ul li .btn:hover {
+  box-shadow: inset 0 0 0 4px #ef476f, inset 0 0 0 8px #ffd166, inset 0 0 0 12px #06d6a0, inset 0 0 0 16px #118ab2;
+  background: var(--main-bg-color);
+  color: var(--secondary-color);
+}
+
+#About {
+  top: 280px;
+  display: flex;
+  gap: 50px;
+  margin-left: 130px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+#About .txtAbout {
+  display: flex;
+  flex-direction: column;
+}
+#About .txtAbout h1 {
+  font-size: 2.8em;
+  color: var(--primary-color);
+}
+#About .txtAbout p {
+  font-size: 2em;
+}
+#About .txtAbout p span {
+  color: var(--primary-color);
+}
+#About .txtAbout div {
+  display: flex;
+  gap: 15px;
+}
+#About .txtAbout div .btn {
+  width: 170px;
+  height: 60px;
+  font-size: 1.8em;
+  font-family: var(--main-title-family);
+  background: var(--primary-color);
+  border: none;
+  border-radius: 50px;
+  color: var(--main-bg-color);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+#About .txtAbout div .btn:hover {
+  box-shadow: inset 0 0 0 4px #ef476f, inset 0 0 0 8px #ffd166, inset 0 0 0 12px #06d6a0, inset 0 0 0 16px #118ab2;
+  background: var(--main-bg-color);
+  color: var(--secondary-color);
+}
+#About img {
+  margin-left: 40px;
+}
+
+#Skills {
+  top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 130px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+#Skills h1 {
+  font-size: 2.8em;
+  color: var(--primary-color);
+  text-align: center;
+}
+#Skills .skills {
+  display: flex;
+  margin: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 50%;
+  min-height: 100%;
+}
+#Skills .skills div {
+  background: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  width: 300px;
+  transition: all 0.1s;
+  border-radius: 50px;
+}
+#Skills .skills div img {
+  width: 100px;
+  margin-left: 35px;
+}
+#Skills .skills div p {
+  margin-right: 35px;
+  font-size: 2em;
+  color: var(--primary-color);
+}
+#Skills .skills div:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.1s;
+}/*# sourceMappingURL=styles.css.map */
