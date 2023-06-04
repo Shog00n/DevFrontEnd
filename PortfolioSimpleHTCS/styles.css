@@ -302,13 +302,14 @@ body .contactSection .form {
 }
 body .contactSection .form .title {
   color: var(--primary-color);
-  font-size: 30px;
+  font-size: 2.8em;
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 body .contactSection .form input {
   outline: 0;
