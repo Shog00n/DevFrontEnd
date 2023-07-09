@@ -1,10 +1,9 @@
 let data;
 let score = 0;
-let bestScore = 0;
 let currentQuestion;
-let questionCount = 0;
 let timerInterval = null;
-let timeLeft = 60;
+let timeLeft = 30;
+const TOTAL_ANSWERS = 3;
 
 // Charger les données de drapeau à partir du fichier JSON
 fetch('pays.json')
@@ -12,12 +11,16 @@ fetch('pays.json')
     .then(json => data = json)
     .catch(error => console.error('Erreur:', error));
 
+function generateRandomIndex() {
+    return Math.floor(Math.random() * data.nbDeDrapeaux);
+}
+
 function generateQuestion() {
-    let correctAnswer = data.pays[Math.floor(Math.random() * data.nbDeDrapeaux)];
+    let correctAnswer = data.pays[generateRandomIndex()];
 
     let wrongAnswers = [];
-    while (wrongAnswers.length < 3) {
-        let wrongAnswer = data.pays[Math.floor(Math.random() * data.nbDeDrapeaux)];
+    while (wrongAnswers.length < TOTAL_ANSWERS) {
+        let wrongAnswer = data.pays[generateRandomIndex()];
         if (wrongAnswer.id !== correctAnswer.id && !wrongAnswers.includes(wrongAnswer)) {
             wrongAnswers.push(wrongAnswer);
         }
@@ -35,7 +38,6 @@ function generateQuestion() {
 
 function displayQuestion() {
     document.querySelector("#flagImage").src = currentQuestion.flag;
-    document.querySelector(".numQuestion").innerHTML = `<p>Question ${questionCount}</p>`;
     
     const reponseEls = document.querySelectorAll(".reponse");
     reponseEls.forEach((el, index) => {
@@ -43,54 +45,68 @@ function displayQuestion() {
     });
 }
 
+function updateScore() {
+    document.querySelector(".score").textContent = `Score: ${score}`;
+}
+
 function checkAnswer(userAnswer) {
     if (userAnswer === currentQuestion.correctAnswer) {
         score++;
-        if (score > bestScore) {
-            bestScore = score;
-        }
-    } else {
-        score = 0;
     }
 
-    document.querySelector(".score").textContent = "Score: " + score;
-    document.querySelector(".bestScore").textContent = "Meilleur score: " + bestScore;
-
+    updateScore();
     generateQuestion();
     displayQuestion();
 }
 
-function startGame() {
-    // Réinitialisez les compteurs à leurs valeurs de départ
-    questionCount = 0;
-    timeLeft = 60;
+function resetGame() {
+    timeLeft = 30;
     score = 0;
+    updateScore();
+}
 
-    document.querySelector(".score").textContent = "Score: " + score;
+function toggleVisibility(sectionSelector, shouldBeActive) {
+    const sectionElement = document.querySelector(sectionSelector);
+    if (shouldBeActive) {
+        sectionElement.classList.add('active');
+    } else {
+        sectionElement.classList.remove('active');
+    }
+}
 
-    // Commencez le timer
-    timerInterval = setInterval(function() {
+function startGame() {
+    resetGame();
+    toggleVisibility('.startSection', false);
+    toggleVisibility('.questionSection', true);
+
+    timerInterval = setInterval(() => {
         timeLeft--;
         document.querySelector(".timerQuestion").textContent = `Temps restant : ${timeLeft} s`;
 
-        // Si le timer atteint 0, fin de la partie
         if (timeLeft <= 0) {
             endGame();
         }
-    }, 1000); // Mise à jour chaque seconde
+    }, 1000);
 
-    // Charger la première question
     generateQuestion();
     displayQuestion();
 }
 
 function endGame() {
-    clearInterval(timerInterval); // Arrête le timer
-    // Ici, vous pouvez ajouter le code pour afficher le score final ou toute autre chose que vous souhaitez faire à la fin du jeu.
+    clearInterval(timerInterval); 
+    toggleVisibility('.questionSection', false);
+    toggleVisibility('.resultatFinSection', true);
+    document.querySelector('.score2').textContent = `Score: ${score}`;
+}
+
+function addActiveClassToStartSection() {
+    toggleVisibility('.startSection', true);
+    toggleVisibility('.resultatFinSection', false);
 }
 
 document.querySelector(".btnStart").addEventListener("click", startGame);
-
+document.querySelector(".btnNG").addEventListener("click", addActiveClassToStartSection);
+document.querySelector(".btnNG2").addEventListener("click", addActiveClassToStartSection)
 const reponseEls = document.querySelectorAll(".reponse");
 reponseEls.forEach(el => {
     el.addEventListener("click", (event) => {

@@ -1,0 +1,212 @@
+:root {
+  --main-font-family: "PT Serif";
+  --bg-color: #fef6e4;
+  --headline-color: #001858;
+  --main-text-color: #172c66;
+  --button-color: #f582ae;
+  --secondary-color: #8bd3dd;
+  --nuance-color: #f3d2c1;
+}
+
+body {
+  font-family: var(--main-font-family);
+  background: var(--bg-color);
+  color: var(--main-text-color);
+}
+
+.btn {
+  width: 180px;
+  height: 100px;
+  border: none;
+  border-radius: 24px;
+  background: var(--button-color);
+  color: var(--headline-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 1px var(--nuance-color);
+  transition: all 0.1s;
+  font-family: var(--main-font-family);
+  font-size: 1.4em;
+}
+
+.btn:hover {
+  background-color: var(--main-text-color);
+  color: var(--button-color);
+  font-size: 1.9em;
+}
+
+/* Customize the label (the checkbox-btn) */
+.checkbox-btn {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-btn label {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background: var(--bg-color);
+  border: 2.5px solid var(--headline-color);
+  border-radius: 10px;
+  transition: 0.2s linear;
+}
+
+.checkbox-btn input:checked ~ .checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  top: 40%;
+  width: 10px;
+  height: 14px;
+  border: 2px solid var(--button-color);
+  filter: drop-shadow(0px 0px 10px var(--button-color));
+  border-width: 0 2.5px 2.5px 0;
+  transition: 0.2s linear;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(0.2);
+}
+
+/* Show the checkmark when checked */
+.checkbox-btn input:checked ~ .checkmark:after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  animation: pulse 1s ease-in;
+}
+
+.checkbox-btn input:checked ~ .checkmark {
+  transform: rotate(45deg);
+  border: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.6);
+  }
+}
+header {
+  position: fixed;
+  top: 5px;
+  width: 99%;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15px;
+}
+header nav div h1 {
+  color: var(--headline-color);
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  font-size: 2.5em;
+}
+header nav div strong {
+  font-size: 1.4em;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  list-style: none;
+  margin-right: 15px;
+}
+
+.sectionSpace {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 99%;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 100px;
+}
+.sectionSpace .titleSection {
+  color: var(--headline-color);
+  font-size: 2em;
+}
+.sectionSpace .containSection {
+  font-size: 1.3em;
+}
+.sectionSpace .containSection form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+.sectionSpace .containSection .students-table {
+  align-items: center;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.sectionSpace .containSection .students-table th, .sectionSpace .containSection .students-table td {
+  padding: 20px;
+  text-align: center;
+}
+.sectionSpace .containSection .students-table tbody tr:nth-child(odd) {
+  background-color: var(--nuance-color);
+}
+.sectionSpace .containSection .students-table tbody tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+.sectionSpace .containSection .students-table thead {
+  color: var(--headline-color);
+  font-size: 1.3em;
+}
+.sectionSpace .containSection .students-table .checkbox2 {
+  padding: 0%;
+  width: 60.16px;
+  height: 42.5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+.sectionSpace .containSection .students-table .checkboxSpace {
+  padding: 0%;
+  width: 122.16px;
+  height: 42.5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}/*# sourceMappingURL=styles.css.map */

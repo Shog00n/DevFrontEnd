@@ -88,7 +88,7 @@ function endGame() {
 
 }
 function addActiveClassToStartSection() {
-    document.querySelector('.startSection').classList.add('active');
+    document.querySelector('.startSection').classList.toggle('active');
     document.querySelector('.resultatFinSection').classList.remove('active');
 }
 

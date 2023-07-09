@@ -1,0 +1,176 @@
+:root {
+  --title-font: "Caprasimo";
+  --main-font: "Belanosima";
+  --main-bg-color: #55423d;
+  --headline-color: #fffffe;
+  --paragraph-color: #fff3ec;
+  --button-color: #ffc0ad;
+  --button-text-color: #271c19;
+  --tertiary-color: #9656a1;
+}
+
+body {
+  background: var(--main-bg-color);
+  color: var(--paragraph-color);
+  font-family: var(--main-font);
+  overflow: hidden;
+}
+
+.btn {
+  width: 160px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px var(--tertiary-color);
+  background: var(--button-color);
+  color: var(--button-text-color);
+  font-family: var(--main-font);
+  font-size: 1.2em;
+  transition: all 0.2s;
+}
+.btn span {
+  color: var(--tertiary-color);
+}
+
+.btn:hover {
+  font-size: 1.5em;
+  transform: scale(1.2);
+  box-shadow: 4px 6px 1px var(--tertiary-color);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: none;
+  background: var(--button-text-color);
+  color: var(--button-color);
+}
+
+header {
+  position: fixed;
+  width: 99%;
+  top: 1px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15px;
+}
+header nav .logoSection h1 {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  color: var(--headline-color);
+  font-family: var(--title-font);
+  font-size: 2.8em;
+}
+header nav .logoSection h1 span {
+  color: var(--tertiary-color);
+}
+header nav .logoSection strong {
+  font-family: var(--title-font);
+  font-size: 1.5em;
+}
+header nav .logoSection strong span {
+  color: var(--tertiary-color);
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin-right: 15px;
+}
+
+section {
+  height: 99vh;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+}
+section .titleSection {
+  color: var(--headline-color);
+  font-family: var(--title-font);
+  font-size: 2.1em;
+}
+section .titleSection h1 {
+  animation: textAppear ease-out 1s;
+}
+section .titleSection h1 span {
+  color: var(--tertiary-color);
+}
+section .contentSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  font-size: 1.5em;
+}
+section .contentSection img {
+  width: 140px;
+  height: 140px;
+  opacity: 0;
+  animation: slider ease-out 1.5s forwards;
+  animation-delay: 0.5s;
+  z-index: 1;
+}
+section .contentSection p {
+  opacity: 0;
+  animation: textAppear ease-out 1s forwards;
+  animation-delay: 0.7s;
+  z-index: 0;
+}
+section .contentSection p span {
+  color: var(--tertiary-color);
+}
+
+footer {
+  position: fixed;
+  bottom: 1px;
+  width: 99%;
+  text-align: center;
+}
+footer span {
+  color: var(--tertiary-color);
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(500px);
+    scale: 1.6;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes textAppear {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+  50% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=styles.css.map */
