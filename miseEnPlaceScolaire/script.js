@@ -42,21 +42,20 @@ function downloadCSV(studentClasses) {
         
     }
 
-    // Encode the CSV content and create a data URL
+
     let encodedUri = encodeURI(csvContent);
 
-    // Create a link element
+
     let link = document.createElement("a");
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", `recap_${studentClasses.innerHTML}.csv`);
 
-    // Add the link to the DOM
+
     document.body.appendChild(link);
 
-    // Simulate clicking the link
     link.click();
 
-    // Remove the link from the DOM
+
     document.body.removeChild(link);
     
 }
@@ -440,7 +439,7 @@ _btnSearch.addEventListener('click', function() {
     myTitle.innerHTML = '<span class="firstLetter">R</span>echercher un élèv<span class="lastLetter">e</span>';
     titleSection.appendChild(myTitle);
 
-    // Créer le formulaire de recherche
+    
     let searchForm = document.createElement('form');
     searchForm.classList.add('searchForm')
     content.appendChild(searchForm);

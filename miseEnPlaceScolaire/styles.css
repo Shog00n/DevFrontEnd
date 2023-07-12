@@ -56,6 +56,16 @@ body {
   font-family: var(--main-font);
   color: var(--pragraph-color);
 }
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 0.8em;
+  }
+}
 
 header {
   position: fixed;
@@ -70,6 +80,16 @@ header nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  header nav {
+    flex-direction: column;
+  }
 }
 header nav .logoNavBar {
   margin-left: 20px;

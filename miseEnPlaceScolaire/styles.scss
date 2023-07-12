@@ -8,6 +8,9 @@
     --tertiary-color: #d9376e;
 }
 
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
 .btn {
     width: 160px;
     height: 80px;
@@ -60,6 +63,13 @@ body {
     background: var(--main-bg-color);
     font-family: var(--main-font);
     color: var(--pragraph-color);
+
+    @media (max-width: $breakpoint-tablet) {
+        font-size: 0.9em; // Réduire la taille de la police pour les tablettes
+    }
+    @media (max-width: $breakpoint-mobile) {
+        font-size: 0.8em; // Réduire encore plus la taille de la police pour les mobiles
+    }
 }
 
 header {
@@ -74,6 +84,14 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column; // Empiler les éléments en colonne sur les tablettes
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+            flex-direction: column; // Empiler les éléments en colonne sur les tablettes
+        }
 
         .logoNavBar {
             margin-left: 20px;
