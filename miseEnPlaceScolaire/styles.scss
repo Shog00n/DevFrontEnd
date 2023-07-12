@@ -1,0 +1,364 @@
+:root {
+    --main-font: 'Belanosima';
+    --title-font: 'Caprasimo';
+    --main-bg-color: #eff0f3;
+    --pragraph-color: #2a2a2a;
+    --title-color: #0d0d0d;
+    --secondary-color: #ff8e3c;
+    --tertiary-color: #d9376e;
+}
+
+.btn {
+    width: 160px;
+    height: 80px;
+    cursor: pointer;
+    font-family: var(--title-font);
+    font-size: 1.4em;
+    border: none;
+    border-radius: 50px;
+    background: #eff0f3;
+    box-shadow:  -20px 20px 60px #cbcccf,
+                20px -20px 60px #ffffff;
+    transition: all .2s;
+}
+
+.btn:hover {
+    font-size: 1.6em;
+    scale: 1.2;
+    color: var(--tertiary-color);
+
+    .firstLetter {
+        color: var(--tertiary-color);
+    }
+}
+.btn:active {
+    border-radius: 50px;
+    background: #eff0f3;
+    box-shadow: inset -20px 20px 60px #cbcccf,
+                inset 20px -20px 60px #ffffff;
+    color: var(--secondary-color);
+
+    .firstLetter {
+        color: var(--secondary-color);
+    }
+    .lastLetter {
+        color: var(--secondary-color);
+    }
+}
+
+.firstLetter {
+    color: var(--secondary-color);
+}
+
+.lastLetter {
+    color: var(--tertiary-color);
+}
+
+
+body {
+
+    background: var(--main-bg-color);
+    font-family: var(--main-font);
+    color: var(--pragraph-color);
+}
+
+header {
+    position: fixed;
+    top: 1px;
+    width: 99%;
+    background-color: transparent;
+    backdrop-filter:  blur(10px);
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .logoNavBar {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-family: var(--title-font);
+                font-size: 2.1em;
+            }
+
+            p {
+                margin-top: -15px;
+                font-size: 1.4em;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            list-style: none;
+            margin-right: 20px;
+        }
+
+    }
+}
+
+.sectionContainer {
+    width: 99%;
+    height: 99%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .titleSection {
+        color: var(--title-color);
+        font-family: var(--title-font);
+        font-size: 1.8em;
+        margin-top: 100px;
+    }
+
+   
+
+    .content {
+        margin-bottom: 50px;
+        border-radius: 20px;
+        background: #eff0f3;
+        box-shadow:  -20px 20px 60px #cbcccf,
+                    20px -20px 60px #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .formList {
+            select {
+                    background: var(--main-bg-color);
+                    border: 1px solid var(--tertiary-color);
+                    color: var(--pragraph-color);
+                    font-family: var(--main-font);
+                    font-size: 18px;
+                    border-radius: 10px;
+                    box-shadow: 4px 3px 1px var(--tertiary-color);
+                }
+            
+        }
+
+        .searchForm {
+            select {
+                    background: var(--main-bg-color);
+                    border: 1px solid var(--tertiary-color);
+                    color: var(--pragraph-color);
+                    font-family: var(--main-font);
+                    font-size: 18px;
+                    border-radius: 10px;
+                    box-shadow: 4px 3px 1px var(--tertiary-color);
+                    z-index: 2;
+                }
+            
+        }
+
+        .btnSubmit {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .tableTitle {
+            text-align: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            font-family: var(--title-font);
+        }
+        
+        .students-table {
+            align-items: center;
+            margin-right: 15px;
+            margin-left: 15px;
+            margin-bottom: 25px;
+
+            th, td {
+                padding: 20px;
+                text-align: center;
+                
+            }
+            
+            tbody tr:nth-child(odd) {
+                background-color: #86c4b3;
+            }
+              
+
+            thead {
+                color : var(--headline-color);
+                font-size: 1.3em;
+            }
+        }
+
+        .btnCsv {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 40vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            font-size: 1.4em;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .chooseClasses {
+                select {
+                    background: var(--main-bg-color);
+                    border: 1px solid var(--tertiary-color);
+                    color: var(--pragraph-color);
+                    font-family: var(--main-font);
+                    font-size: 18px;
+                    border-radius: 10px;
+                    box-shadow: 4px 3px 1px var(--tertiary-color);
+                }
+            }
+
+            .addName {
+                margin-top: 10px;
+                position: relative;
+
+                .input {
+                    font-size: 16px;
+                    padding: 10px 10px 10px 5px;
+                    display: block;
+                    width: 200px;
+                    border: none;
+                    border-bottom: 1px solid #515151;
+                    background: transparent;
+                   }
+                   
+                   .input:focus {
+                    outline: none;
+                   }
+                   
+                   label {
+                    color: #999;
+                    font-size: 18px;
+                    font-weight: normal;
+                    position: absolute;
+                    pointer-events: none;
+                    left: 5px;
+                    top: 10px;
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                   }
+                   
+                   .input:focus ~ label, .input:valid ~ label {
+                    top: -20px;
+                    font-size: 14px;
+                    color: var(--pragraph-color);
+                   }
+                   
+                   .bar {
+                    position: relative;
+                    display: block;
+                    width: 200px;
+                   }
+                   
+                   .bar:before, .bar:after {
+                    content: '';
+                    height: 2px;
+                    width: 0;
+                    bottom: 1px;
+                    position: absolute;
+                    background: var(--secondary-color);
+                    transition: 0.2s ease all;
+                    -moz-transition: 0.2s ease all;
+                    -webkit-transition: 0.2s ease all;
+                   }
+                   
+                   .bar:before {
+                    left: 50%;
+                   }
+                   
+                   .bar:after {
+                    right: 50%;
+                   }
+                   
+                   .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+                    width: 50%;
+                   }
+                   
+                   .highlight {
+                    position: absolute;
+                    height: 60%;
+                    width: 100px;
+                    top: 25%;
+                    left: 0;
+                    pointer-events: none;
+                    opacity: 0.5;
+                   }
+                   
+                   .input:focus ~ .highlight {
+                    animation: inputHighlighter 0.3s ease;
+                   }
+            }
+
+            .regimeSortie {
+
+                .generalDivRegime {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: space-between;
+                }
+            }
+
+            .demi_pension {
+
+                .generalDivPension {
+                    .okMange {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        text-align: center;
+                        gap: 35px;
+
+                    }
+                }
+            }
+            
+
+            .assurances {
+                z-index: 1;
+            }
+
+            .saveBtn {
+                margin-top: 10px;
+                z-index: 0;
+                background: var(--tertiary-color);
+                margin-bottom: 20px;
+            }
+
+            .saveBtn:hover {
+                background: var(--secondary-color);
+            }
+        }
+    }
+}
+
+
+
+@keyframes inputHighlighter {
+    from {
+     background: #5264AE;
+    }
+   
+    to {
+     width: 0;
+     background: transparent;
+    }
+   }
+

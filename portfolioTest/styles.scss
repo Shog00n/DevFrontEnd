@@ -22,7 +22,7 @@ body {
   height: 60px;
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   box-shadow: 1px 2px 1px var(--tertiary-color);
   background: var(--button-color);
   color: var(--button-text-color);
@@ -136,6 +136,74 @@ section {
             animation-delay: .5s;
             z-index: 1;
         }
+        h1 {
+            opacity: 0;
+            animation: textAppear ease-out 1s forwards;
+            animation-delay: .5s;
+            font-family: var(--title-font);
+            font-size: 1.3em;
+            color: var(--headline-color);
+
+            span {
+                color: var(--tertiary-color);
+            }
+
+        }
+
+        .card {
+            width: 300px;
+            transition: all .1s;
+            
+
+            div {
+
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                align-items: center;
+                text-align: center;
+                .gitLogo {
+                    width: 35px;
+                    height: 35px;
+                    opacity: 0;
+                    animation: textAppear .8s ease-out forwards;
+                    animation-delay: 1.1s;
+                    
+                }
+                a {
+                    text-decoration: none;
+                    color: var(--paragraph-color);
+                    opacity: 0;
+                    animation: textAppear ease-out 1s forwards;
+                    animation-delay: .5s;
+                    cursor: pointer;
+                    transition: all .1s;
+                }
+                a:hover {
+                    color: var(--tertiary-color);
+                    transform: scale(1.2);
+                }
+
+            }
+
+            .gitLogo {
+                width: 35px;
+                height: 35px;
+                
+            }
+            a {
+                text-decoration: none;
+                color: var(--paragraph-color);
+            }
+        }
+
+        .card:hover {
+            scale: 1.2;
+        }
+        .websiteLogo {
+            width: 280px;
+            height: 140px;
+        }
         p {
             opacity: 0;
             animation: textAppear ease-out 1s forwards;
@@ -146,8 +214,74 @@ section {
                 color: var(--tertiary-color);
             }
         }
+        .form {
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            width: 500px;
+            padding: 20px;
+            border-radius: 50px;
+            background: #55423d;
+            box-shadow:  -20px -20px 60px #483834,
+                        20px 20px 60px #624c46;
+            
+            .vowel {
+                color: #9656a1;
+            }
+                        
+            .consonant {
+                color: #fff3ec;
+            }
+
+            
+        }
+
+        .form input {
+            outline: 0;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 10px;
+            background: #55423d;
+            box-shadow: inset -20px -20px 60px #483834,
+                        inset 20px 20px 60px #624c46;
+            width: 75%;
+            height: 50px;
+            animation: slider 1s ease-out;
+            color: var(--paragraph-color);
+            font-family: var(--main-font);
+            font-size: 1.1em;
+        }
+          
+        .form textarea {
+            height: 100px;
+            width: 90%;
+            border-radius: 10px;
+            background: #55423d;
+            box-shadow: inset -20px -20px 60px #483834,
+                        inset 20px 20px 60px #624c46;
+            resize: none;
+            outline: 0;
+            padding: 8px 14px;
+            border: none;
+            opacity: 0;
+            animation: slider 1s ease-out forwards;
+            animation-delay: .5s;
+            color: var(--paragraph-color);
+            font-family: var(--main-font);
+            font-size: 1.1em;
+        }
+
+        .form button {
+            opacity: 0;
+            animation: textAppear 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
     }
 }
+
+
 
 footer {
     position: fixed;
@@ -190,3 +324,4 @@ footer {
         opacity: 1;
     }
 }
+

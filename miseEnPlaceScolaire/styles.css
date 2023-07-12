@@ -1,0 +1,296 @@
+:root {
+  --main-font: "Belanosima";
+  --title-font: "Caprasimo";
+  --main-bg-color: #eff0f3;
+  --pragraph-color: #2a2a2a;
+  --title-color: #0d0d0d;
+  --secondary-color: #ff8e3c;
+  --tertiary-color: #d9376e;
+}
+
+.btn {
+  width: 160px;
+  height: 80px;
+  cursor: pointer;
+  font-family: var(--title-font);
+  font-size: 1.4em;
+  border: none;
+  border-radius: 50px;
+  background: #eff0f3;
+  box-shadow: -20px 20px 60px #cbcccf, 20px -20px 60px #ffffff;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  font-size: 1.6em;
+  scale: 1.2;
+  color: var(--tertiary-color);
+}
+.btn:hover .firstLetter {
+  color: var(--tertiary-color);
+}
+
+.btn:active {
+  border-radius: 50px;
+  background: #eff0f3;
+  box-shadow: inset -20px 20px 60px #cbcccf, inset 20px -20px 60px #ffffff;
+  color: var(--secondary-color);
+}
+.btn:active .firstLetter {
+  color: var(--secondary-color);
+}
+.btn:active .lastLetter {
+  color: var(--secondary-color);
+}
+
+.firstLetter {
+  color: var(--secondary-color);
+}
+
+.lastLetter {
+  color: var(--tertiary-color);
+}
+
+body {
+  background: var(--main-bg-color);
+  font-family: var(--main-font);
+  color: var(--pragraph-color);
+}
+
+header {
+  position: fixed;
+  top: 1px;
+  width: 99%;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logoNavBar {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav .logoNavBar h1 {
+  font-family: var(--title-font);
+  font-size: 2.1em;
+}
+header nav .logoNavBar p {
+  margin-top: -15px;
+  font-size: 1.4em;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.sectionContainer {
+  width: 99%;
+  height: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sectionContainer .titleSection {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-size: 1.8em;
+  margin-top: 100px;
+}
+.sectionContainer .content {
+  margin-bottom: 50px;
+  border-radius: 20px;
+  background: #eff0f3;
+  box-shadow: -20px 20px 60px #cbcccf, 20px -20px 60px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionContainer .content .formList select {
+  background: var(--main-bg-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--pragraph-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 4px 3px 1px var(--tertiary-color);
+}
+.sectionContainer .content .searchForm select {
+  background: var(--main-bg-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--pragraph-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 4px 3px 1px var(--tertiary-color);
+  z-index: 2;
+}
+.sectionContainer .content .btnSubmit {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.sectionContainer .content .tableTitle {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: var(--title-font);
+}
+.sectionContainer .content .students-table {
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+.sectionContainer .content .students-table th, .sectionContainer .content .students-table td {
+  padding: 20px;
+  text-align: center;
+}
+.sectionContainer .content .students-table tbody tr:nth-child(odd) {
+  background-color: #86c4b3;
+}
+.sectionContainer .content .students-table thead {
+  color: var(--headline-color);
+  font-size: 1.3em;
+}
+.sectionContainer .content .btnCsv {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sectionContainer .content form {
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  font-size: 1.4em;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.sectionContainer .content form .chooseClasses select {
+  background: var(--main-bg-color);
+  border: 1px solid var(--tertiary-color);
+  color: var(--pragraph-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 4px 3px 1px var(--tertiary-color);
+}
+.sectionContainer .content form .addName {
+  margin-top: 10px;
+  position: relative;
+}
+.sectionContainer .content form .addName .input {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+.sectionContainer .content form .addName .input:focus {
+  outline: none;
+}
+.sectionContainer .content form .addName label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.sectionContainer .content form .addName .input:focus ~ label, .sectionContainer .content form .addName .input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: var(--pragraph-color);
+}
+.sectionContainer .content form .addName .bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+.sectionContainer .content form .addName .bar:before, .sectionContainer .content form .addName .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: var(--secondary-color);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.sectionContainer .content form .addName .bar:before {
+  left: 50%;
+}
+.sectionContainer .content form .addName .bar:after {
+  right: 50%;
+}
+.sectionContainer .content form .addName .input:focus ~ .bar:before, .sectionContainer .content form .addName .input:focus ~ .bar:after {
+  width: 50%;
+}
+.sectionContainer .content form .addName .highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.sectionContainer .content form .addName .input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+.sectionContainer .content form .regimeSortie .generalDivRegime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.sectionContainer .content form .demi_pension .generalDivPension .okMange {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+}
+.sectionContainer .content form .assurances {
+  z-index: 1;
+}
+.sectionContainer .content form .saveBtn {
+  margin-top: 10px;
+  z-index: 0;
+  background: var(--tertiary-color);
+  margin-bottom: 20px;
+}
+.sectionContainer .content form .saveBtn:hover {
+  background: var(--secondary-color);
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}/*# sourceMappingURL=styles.css.map */
