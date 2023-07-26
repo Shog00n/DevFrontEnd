@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Handjet&display=swap");
+:root {
+  --main-font-family: "Handjet";
+  --main-bg-color: #0f0e17;
+  --main-text-color: #a7a9be;
+  --title-color: #fffffe;
+  --button-color: #ff8906;
+  --secondary: #f25f4c;
+  --tertiary: #e53170;
+}
+
+body {
+  font-family: var(--main-font-family);
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  overflow: hidden;
+}
+
+.btn {
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+  background-color: var(--button-color);
+  color: var(--title-color);
+  border: none;
+  border-radius: 10px;
+  font-family: var(--main-font-family);
+  font-size: 2em;
+  box-shadow: 2px 3px 1px var(--tertiary);
+  transition: all 0.1s;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+.btn:active {
+  transform: translate(2px, 3px);
+  box-shadow: none;
+}
+
+.logIn .myForm {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.logIn .myForm .labelForUsername {
+  color: var(--title-color);
+  font-size: 2.5em;
+}
+.logIn .myForm .usernameInput {
+  width: 160px;
+  height: 40px;
+  background: transparent;
+  font-family: var(--main-font-family);
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--main-text-color);
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  box-shadow: 2px 3px 1px var(--secondary);
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.navBar .divLogo {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.navBar .divLogo .titleLogo {
+  color: var(--title-color);
+  font-size: 5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.navBar .divLogo .strongLogo {
+  font-size: 2em;
+}
+.navBar .listNavBar {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+}
+
+.home {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home .textHome {
+  font-size: 2em;
+}
+
+.profil {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.profil .divProfil {
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 25px 60px 25px 60px;
+  box-shadow: 3px 5px 1px var(--button-color);
+}
+.profil .divProfil .nameUser {
+  color: var(--title-color);
+  font-size: 2.3em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.profil .divProfil p {
+  font-size: 1.8em;
+}
+.profil .divProfil .btnReturn {
+  margin-bottom: 20px;
+}
+
+.playGame {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+.playGame .scoreBoard {
+  font-size: 2em;
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 25px 60px 25px 60px;
+  box-shadow: 3px 5px 1px var(--button-color);
+}
+.playGame .scoreBoard p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.playGame .answerDiv {
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 25px 60px 25px 60px;
+  box-shadow: 3px 5px 1px var(--button-color);
+}
+.playGame .answerDiv .divTarget {
+  font-size: 2.3em;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.playGame .answerDiv .divTarget .targetNb {
+  color: var(--tertiary);
+  font-size: 2.5em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.playGame .answerDiv .formRep {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.playGame .answerDiv .formRep .repInput {
+  width: 160px;
+  height: 40px;
+  background: transparent;
+  font-family: var(--main-font-family);
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--main-text-color);
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  box-shadow: 2px 3px 1px var(--secondary);
+}
+.playGame .btnQuit {
+  margin-top: 20px;
+  width: 100px;
+  height: 40px;
+}
+.playGame .endGameBoard {
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 25px 60px 25px 60px;
+  box-shadow: 3px 5px 1px var(--button-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.playGame .endGameBoard p {
+  font-size: 2.3em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.playGame .endGameBoard .divBtnEndGame {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
