@@ -206,24 +206,28 @@ async function playAGame() {
     let scoreDisplay = createMyElement("p", "scoreDisplay", scoreBoard);
     let pbDisplay = createMyElement("p", "pbDisplay", scoreBoard);
     let lastScoreDisplay = createMyElement("p", "lastScoreDisplay", scoreBoard);
-    let divG = createMyElement("div", "divG", ContentSection)
+    let restLife = createMyElement("p", "restLife", scoreBoard);
+    let divG = createMyElement("div", "divG", ContentSection);
 
     while(_userLifes > 0){
         scoreDisplay.textContent = `Score: ${_scoreUser}`;
         pbDisplay.textContent = `Personal Best: ${_userPB}`;
         lastScoreDisplay.textContent = `Last Score: ${_userLastScore}`;
+        restLife.textContent = `${_userLifes} ❤️`
         
         let targetNum = 0;
         if (_goodAnswer < 3){
             targetNum = getRandomArbitrary(1, 10);
-        } else if (_goodAnswer < 8) {
+        } else if (_goodAnswer < 6) {
             targetNum = getRandomArbitrary(10, 100);
-        } else if (_goodAnswer < 15) {
+        } else if (_goodAnswer < 9) {
             targetNum = getRandomArbitrary(100, 1000);
-        } else if (_goodAnswer < 24) {
+        } else if (_goodAnswer < 14) {
             targetNum = getRandomArbitrary(1000, 10000);
-        } else {
+        } else if (_goodAnswer < 20){
             targetNum = getRandomArbitrary(10000, 100000);
+        } else {
+            targetNum = getRandomArbitrary(100000, 1000000);
         }
         let divAnswer = createMyElement("div", "answerDiv", divG)
         let divTarget = createMyElement("div", "divTarget", divAnswer)
