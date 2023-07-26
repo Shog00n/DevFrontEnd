@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        Générer un nombre entre 0 et 10
+        3 essaies pour deviner
+        isRight(n)
+        guess()
+        */
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        
+
+        const isRight = function (n) {
+            let i = 3
+            while (i > 0) {
+                if (guess() === n) {
+                    console.log("Bien joué")
+                    break
+                } else {
+                    console.log("Essaie encore !")
+                    i--
+                }
+            }
+            console.log(`${i} essaies, Réponse : ${n}`)
+        }
+
+        function guess() {
+            const tryGuess = prompt("Entrez un nombre entre 0 et 10") * 1
+            return tryGuess
+        }
+
+        console.log(isRight(getRandomInt(11)))
+
+
+    </script>
+</body>
+
+</html>

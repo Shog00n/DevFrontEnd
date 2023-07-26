@@ -447,7 +447,7 @@ _btnSearch.addEventListener('click', function() {
     // Créer des options de sélection pour chaque critère de recherche
     let criteriaOptions = {
         "Assurance": ["Non", "Oui"],
-        "Régime": ["Demi-pensionnaire", "Externe"],
+        "Repas": ["Dp", "Ext"],
         "Droit à l'image": ["G", "I", "G/I", "Aucun"]
     };
 

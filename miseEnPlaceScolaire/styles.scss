@@ -8,8 +8,7 @@
     --tertiary-color: #d9376e;
 }
 
-$breakpoint-tablet: 768px;
-$breakpoint-mobile: 480px;
+
 
 .btn {
     width: 160px;
@@ -64,12 +63,6 @@ body {
     font-family: var(--main-font);
     color: var(--pragraph-color);
 
-    @media (max-width: $breakpoint-tablet) {
-        font-size: 0.9em; // Réduire la taille de la police pour les tablettes
-    }
-    @media (max-width: $breakpoint-mobile) {
-        font-size: 0.8em; // Réduire encore plus la taille de la police pour les mobiles
-    }
 }
 
 header {
@@ -85,13 +78,6 @@ header {
         justify-content: space-between;
         align-items: center;
 
-        @media (max-width: $breakpoint-tablet) {
-            flex-direction: column; // Empiler les éléments en colonne sur les tablettes
-        }
-
-        @media (max-width: $breakpoint-mobile) {
-            flex-direction: column; // Empiler les éléments en colonne sur les tablettes
-        }
 
         .logoNavBar {
             margin-left: 20px;
@@ -116,6 +102,7 @@ header {
             gap: 30px;
             list-style: none;
             margin-right: 20px;
+
         }
 
     }
@@ -202,6 +189,12 @@ header {
             
             tbody tr:nth-child(odd) {
                 background-color: #86c4b3;
+                color: var(--main-bg-color);
+            }
+
+            tbody tr:nth-child(even) {
+                background-color: var(--main-bg-color);
+                color: #86c4b3;
             }
               
 

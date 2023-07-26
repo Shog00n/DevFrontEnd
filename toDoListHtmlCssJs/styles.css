@@ -1,0 +1,28 @@
+:root {
+  --main-font-family: "Pangolin", cursive;
+}
+
+body {
+  font-family: var(--main-font-family);
+}
+
+.divGen {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.divToDo {
+  width: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 3px 1px black;
+}
+
+.thingDo {
+  text-decoration: line-through;
+}/*# sourceMappingURL=styles.css.map */
