@@ -9,8 +9,8 @@ function cleanAll() {
     ContentSection.classList.remove("playGame")
     ContentSection.classList.remove('home')
 
-    NavBar.innerHTML = "";
-    ContentSection.innerHTML = "";
+    NavBar.textContent = "";
+    ContentSection.textContent = "";
 };
 
 function createMyElement(typeOfElement, classOfElement, parentOfElement) {
@@ -26,7 +26,7 @@ function getRandomArbitrary(min, max) {
 }
 
 function clearTarget(clearThis){
-    clearThis.innerHTML = ""
+    clearThis.textContent = ""
 }
 
 function profilConnect() {
@@ -105,7 +105,7 @@ function createNavBar() {
 
 
     let textUser = createMyElement("p", "textHome", ContentSection);
-    textUser.innerHTML = `Hi 👋 ${user}, let's Play !`
+    textUser.textContent = `Hi 👋 ${user}, let's Play !`
     let myBtnPlay = createMyElement("button", "btn", ContentSection);
     myBtnPlay.classList.add('btnPlay');
     myBtnPlay.textContent = "Play";
@@ -150,16 +150,16 @@ function showProfil(){
 
     let myDivProfil = createMyElement("div", "divProfil", ContentSection);
     let myTitle = createMyElement("h1", "nameUser", myDivProfil);
-    myTitle.innerHTML = `Profil de ${_username}`
+    myTitle.textContent = `Profil de ${_username}`
     let myPB = createMyElement("p", "bestScoreProfil", myDivProfil);
-    myPB.innerHTML = `Best score : ${_bestScore}`;
+    myPB.textContent = `Best score : ${_bestScore}`;
     let myLastScore = createMyElement("p", "lastScoreProfil", myDivProfil);
-    myLastScore.innerHTML = `Last score : ${_lastScore}`;
+    myLastScore.textContent = `Last score : ${_lastScore}`;
     let myNbOfGame = createMyElement("p", "nbGameProfil", myDivProfil);
-    myNbOfGame.innerHTML = `Number of game : ${_nbOfGame}`;
+    myNbOfGame.textContent = `Number of game : ${_nbOfGame}`;
     let myReturnBtn = createMyElement('button', "btn", myDivProfil);
     myReturnBtn.classList.add("btnReturn")
-    myReturnBtn.innerHTML = "🔙"
+    myReturnBtn.textContent = "🔙"
     myReturnBtn.addEventListener('click', function(e){
         e.preventDefault();
 
@@ -213,7 +213,7 @@ async function playAGame() {
         scoreDisplay.textContent = `Score: ${_scoreUser}`;
         pbDisplay.textContent = `Personal Best: ${_userPB}`;
         lastScoreDisplay.textContent = `Last Score: ${_userLastScore}`;
-        restLife.textContent = `${_userLifes} ❤️`
+        restLife.textContent = `${"❤️".repeat(_userLifes)}`;
         
         let targetNum = 0;
         if (_goodAnswer < 3){
@@ -232,9 +232,9 @@ async function playAGame() {
         let divAnswer = createMyElement("div", "answerDiv", divG)
         let divTarget = createMyElement("div", "divTarget", divAnswer)
         let textTarget = createMyElement("p", "textTarget", divTarget)
-        textTarget.innerHTML = "Remember This : "
+        textTarget.textContent = "Remember This : "
         let showTarget = createMyElement("p", "targetNb", divTarget);
-        showTarget.innerHTML = `${targetNum}`;
+        showTarget.textContent = `${targetNum}`;
         let divBtnQuit = createMyElement("div", "divBtnQuit", divG)
         let quitBtn = createMyElement("button", "btn", divBtnQuit)
         quitBtn.classList.add("btnQuit")
@@ -259,14 +259,15 @@ async function playAGame() {
             }
         } else {
             _userLifes--;
+
         }
         
-        divG.innerHTML = ""
+        divG.textContent = ""
         
         
     }
 
-    ContentSection.innerHTML = ""
+    ContentSection.textContent = ""
 
     // Update user data after the game
     _userLastScore = _scoreUser;
