@@ -231,8 +231,8 @@ class SectionManager {
             });
         
             const projectData = [
-                { name: 'Protocole Rentrée', link: 'http://lien1.com', description: `Il s'agit d'une app administratif</br>Facilitant le travail de la Vie Scolaire` },
-                { name: 'Le jeu de la scolarité', link: 'http://lien2.com', description: `Il s'agit d'un jeu de type Quizz` },
+                { name: 'Protocole Rentrée', link: 'https://github.com/Shog00n/DevFrontEnd/tree/PublicMain/ProtocoleRentr%C3%A9e', description: `Il s'agit d'une app administratif</br>Facilitant le travail de la Vie Scolaire` },
+                { name: 'Le jeu de la scolarité', link: 'https://github.com/Shog00n/DevFrontEnd/tree/PublicMain/projetJeuScolarite', description: `Il s'agit d'un jeu de type Quizz` },
                 // Ajoutez d'autres projets ici...
             ];
 
