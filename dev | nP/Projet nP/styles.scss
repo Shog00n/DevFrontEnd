@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Young+Serif&display=swap');
+
+:root {
+    --font-family: 'Playpen Sans';
+    --secondary-font-family: 'Young Serif';
+    --bg-color: #f9f4ef;
+    --title-color: #020826;
+    --pragraph-color: #716040;
+    --button: #8c7851;
+    --text-button: #fffffe;
+    --stroke: #020826;
+    --secondary-color: #eaddcf;
+    --tertiary-color: #f25042;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--bg-color);
+    color: var(--pragraph-color);
+    overflow: hidden;
+}
+
+.btn {
+    width: 180px;
+    height: 60px;
+    background: var(--button);
+    font-family: var(--secondary-font-family);
+    font-size: 1.4em;
+    color: var(--text-button);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 3px 1px var(--secondary-color);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.btn:hover {
+    scale: 1.2;
+}
+
+.btn:active {
+    box-shadow: none;
+    transform: translate(2px, 3px);
+    background: var(--text-button);
+    color: var(--button);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    .brandDiv {
+        
+        img {
+            width: 200px;
+            height: 200px;
+            z-index: 0;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: var(--title-color);
+            margin-top: -45px;
+            z-index: 1;
+        }
+    }
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            margin-top: -40px;
+            margin-right: 40px;
+        }
+    }
+}
+
+section {
+    width: 99%;
+    height: 99%;
+    text-align: center;
+    .titleSection {
+        .aboutTitle, .skillsTitle, .worksTitle, .contactTitle {
+            margin-top: 7%;
+            color: var(--title-color);
+            font-family: var(--secondary-font-family);
+            font-size: 1.5em;
+        }
+    }
+
+    .content {
+
+        .aboutContentText{
+            font-size: 1.3em;
+        }
+        .skillsContentText {
+            margin: auto;
+            width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 40px;
+            .skillsDiv {
+                margin-top: 3%;
+                width: 30%;
+                border-radius: 10px;
+                background: var(--secondary-color);
+                transition: all .1s;
+                box-shadow: 2px 3px 1px var(--button);
+                .skillsDiv-name {
+                    color: var(--title-color);
+                    font-family: var(--secondary-font-family);
+                }
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+            .skillsDiv:hover {
+                scale: 1.2;
+                box-shadow: 6px 7px 2px var(--button);
+            }
+        }
+        .contactDiv {
+            margin: auto;
+            width: 30%;
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px var(--button);
+            padding: 20px;
+            
+        }
+        
+        .contactText {
+            margin-bottom: 20px;
+        }
+        
+        .contactForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input, textarea {
+                width: 80%;
+                margin-bottom: 15px;
+                padding: 10px;
+                border: 1px solid var(--button);
+                border-radius: 4px;
+                text-align: center;
+                font-family: var(--font-family);
+                font-size: 1.3em;
+            }
+        }
+        
+        .submitButton {
+            background-color: var(--button);
+            color: var(--text-button);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .divGenWorks {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+
+            .projectCard {
+                background: var(--secondary-color);
+                width: 15%;
+                border-radius: 10px;
+                box-shadow: 2px 3px 1px var(--button);
+                .projectName {
+                    color: var(--title-color);
+                    font-family: var(--secondary-font-family);
+                }
+            }
+        }
+    }
+
+    .footSection {
+        .skillsFoot {
+               color: var(--title-color);
+               font-size: 1.1em;
+               text-decoration-line: underline; 
+        }
+    }
+}
+
+footer {
+    width: 99%;
+    position: fixed;
+    bottom: 5px;
+    text-align: center;
+
+}

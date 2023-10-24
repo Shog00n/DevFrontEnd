@@ -1,0 +1,27 @@
+#header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    transition: top 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.sticky {
+    top: 0;
+}
+
+.hidden {
+    top: -100%;
+}
+p {
+    margin-top: 45px;
+    font-size: 1.3em;
+}
