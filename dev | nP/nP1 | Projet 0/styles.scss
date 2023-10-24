@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+
+:root {
+    --background-color: #f9f4ef;
+    --headline-color: #020826;
+    --paragraph: #716040;
+    --button: #8c7851;
+    --button-text: #fffffe;
+    --stroke: #020826;
+    --secondary: #eaddcf;
+    --tertiary: #f25042;
+    --font-family: 'Young Serif';
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--paragraph);
+}

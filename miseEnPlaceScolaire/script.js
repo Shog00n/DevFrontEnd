@@ -1,6 +1,7 @@
 const _btnAdd = document.querySelector('.btnAdd');
 const _btnSearch = document.querySelector('.btnSearch');
 const _btnList = document.querySelector('.btnList');
+const _btnModify = document.querySelector('.btnMod')
 
 let sectionContainer = document.querySelector('.sectionContainer');
 let titleSection = document.querySelector('.titleSection');
@@ -448,7 +449,7 @@ _btnSearch.addEventListener('click', function() {
     let criteriaOptions = {
         "Assurance": ["Non", "Oui"],
         "Repas": ["Dp", "Ext"],
-        "Droit à l'image": ["G", "I", "G/I", "Aucun"]
+        "Droit à l'image": ["Groupe", "Individuel", "G/I", "Aucun"]
     };
 
     for (let criterion in criteriaOptions) {
@@ -500,9 +501,9 @@ _btnSearch.addEventListener('click', function() {
             let students = data[classe];
             Object.keys(students).forEach(studentName => {
                 let studentData = students[studentName][0]; // assuming there's at least one item
-                if (studentData[filterType] === filterValue) {
+                if (studentData && studentData[filterType] === filterValue) {
                     filteredStudents.push({ name: studentName, class: classe });
-                }
+                }                
             });
         });
 
